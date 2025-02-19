@@ -23,6 +23,12 @@
   }
 </script>
 
+
+<!--
+Note: this could be done more cleanly without using `enhance` on the form. 
+However I noticed that edits to a saved event had some side effects that I wanted to avoid
+-->
+
 {#if data.event}
   <h1 class="text-2xl font-semibold mb-4">Edit Event</h1>
 
