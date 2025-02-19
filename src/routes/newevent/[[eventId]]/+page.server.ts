@@ -1,6 +1,6 @@
 import { createEvent, fetchEventById, deleteEventById, updateEventById } from "$lib/server/remote-events";
 import type { Actions, PageServerLoad } from "./$types";
-import { error, redirect } from "@sveltejs/kit";
+import { error, redirect, json } from "@sveltejs/kit";
 
 export const load: PageServerLoad = async ({params}) => {
   if (!params.eventId) {
@@ -47,6 +47,6 @@ export const actions: Actions = {
       if (!updatedEvent) {
         error(404, 'Event not found');
       }
-      redirect(303, `/${updatedEvent.id}`);
+      return { success: true };
     }
 }
