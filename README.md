@@ -32,6 +32,12 @@ To run this project locally, follow these steps:
    npm ci
    ```
 
+1. **Build SMUI theme**
+
+  ```
+  npm run prepare
+  ```
+
 1. Start the development server:
 
    ```bash
